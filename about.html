@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chennai School</title>
+    <link rel="stylesheet" href="styles/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="scripts/forward.js"></script>
+    <a href="top"></a>
+</head>
+<body>
+    <div class="container" style="width: 100%; height: 100%;">
+    
+    <div class="menu">
+        <div><a href="home.html" > Home</div></a>
+        <div><a href="about.html" target=_blank >About</div></a>
+        <div><a href="contact.html" >Contact Us</div></a>
+        <div><a href="admission.html" >Admission Details</div></a>
+    </div>
+    <div class="content">
+        <div class="c1">
+            <img id="im1" src="images\high-school-building-26880366.jpg" width="100%" height="100%" style="z-index: -1; position: absolute;"> 
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <i class="fa fa-chevron-circle-left" aria-hidden="true" onclick="backward()" style="font-size: 50px;" ></i>
+            <i class="fa fa-chevron-circle-right" aria-hidden="true" onclick="forward()" style="font-size: 50px; padding-left: 80%;"></i>
+            
+        </div>
+        <div class="c2">
+            <p class="p1">
+                Every era in the history of the world faces a change towards progress. <br>
+                <b>"Change"</b> is the key note all over the globe today; <br>
+                <b>"Change"</b> rejuvenates old ideas for the good of mankind.<br> 
+                Though this "Change" for a New Age occurs in every era, it takes a mastermind and a revolutionary force to recognize it.<br> 
+                Chennai School is that force, masterminding the inevitable "Change" that you will appreciate!
+                <br><br>
+                Chennai School is promoted by Kupidisaatham Narayanaswami Educational Trust (KNET) and governed by a Board of Trustees. Today, with more than 6000 students and 200 faculties under its wing, Chennai Public Group of Schools, are the most sought after new era schools in Chennai city, growing from strength to strength within a very short span of time since its launch.
+                <br><br>
+                We at Chennai School, firmly believe that every child is the most potent seed of a powerful human being. Perceiving the approach of New Age of learning equips and empower the children of today, we prepare them to meet the challenges of future by imparting holistic learning rich in social, cultural, theoretical and practical knowledge.
+                <br><br>
+                Chennai School is a very special place where a "mission" drives the management that inspires all our students to continuous inquiry, courage, optimism and integrity to instill in them the importance of being responsible a human being.
+                <br><br>
+                <b>Our Vision</b>
+                To build creative, disciplined and dynamic leaders of tomorrow who will lead others by example and be active global citizens contributing richly to both our Nation and the World.
+                <br><br>
+                <b>Our Mission</b>
+                To offer a dynamic educational program to students of diverse backgrounds that encourages each student to achieve his/her highest potential; to facilitate an inquiry based approach that will make them life long learners; to offer a unique blend of curriculum that enables easy transition from school to tertiary education anywhere in the world.
+                <br><br>
+                <b>Our Motto</b>
+                Empowering every child
+            </p>    
+        </div>
+        <div class="copyright">
+        <b><p id="part3">copy right &COPY;2020 Chennai School<sup>TM</sup></b>
+    
+        <a href="#top" style="padding-left: 70%;padding-bottom: 10px;">Back to Top</a></p>
+    </div>
+    </div>
+      
+</div>
+    <script>
+      x=["images/gettyimages-1072480658-612x612.jpg","images/high-school-building-26880366.jpg","images/images (1).jpg","images/images (2).jpg","images/download (3).jpg"];
+        
+        count=-1;
+        slide=document.getElementById("im1");
+        
+        function forward()
+        {
+            clearInterval(res);
+            if(count<x.length)
+            {
+            count=count+1;
+            if(count==x.length)
+            {
+                count=0 ; 
+            }
+            slide.src=x[count];
+            }
+        }
+        function backward()
+        {
+            clearInterval(res);
+            if(count<=x.length){
+                count=count-1;
+                if(count==-1|| count==-2){
+                    index=x.length-1;
+                    count=index;  
+                }
+            slide.src=x[count];
+            console.log(count) ;
+            }
+        }
+        count=0
+        function slideshow()
+        {
+            if(count<=x.length){
+                count=count+1;
+                if(count==x.length){
+                    count=0;
+                }
+            slide.src=x[count] ;
+            }
+        }res=setInterval(slideshow,2000);
+    </script>
+</body>
+</html>

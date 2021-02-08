@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chennai School</title>
+    <link rel="stylesheet" href="styles\form.css">
+</head>
+<body style="background-color:grey;">
+    <a href="home.html" style="background-color:yellow;">Back to Home</a>
+    <form action="home.html" onsubmit="return check()" autocomplete="off" >
+    <table class="tb" align="center" >
+        <th colspan="2">Admission form</th>
+        <tr><td>Name:<span style="color:red">**</span></td><td><input type="text" name="" id=""> </td></tr>
+        <tr><td>Date Of Birth:<span style="color:red">**</span></td><td><input type="text" id=""></td></tr>
+        <tr><td>Gender</td><td><input type="radio" name="gg" id="radio">Male<input type="radio" name="gg"id="radio">Female</td></tr>
+        <tr><td>Father Name:</td><td><input type="text"></td></tr>
+        <tr><td>Mother Name:</td><td><input type="text"></td></tr>
+        <tr><td>Father Occupation:</td><td><input type="text"></td></tr>
+        <tr><td>Mother Occupation:</td><td><input type="text"></td></tr>
+        <tr><td>Address<span style="color:red">**</span></td><td><input type="text" id="address"></td></tr>
+        <tr><td>EmailId<span style="color:red">**</span></td><td><input type="email" id="em"></td></tr>
+        <tr><td>Contact Number<span style="color:red">**</span></td><td><input type="text" id="cn"></td></tr>
+        <tr><td colspan="2" style="text-align: right; padding-right:25%;"><input type="submit" value="submit"></td></tr>
+    </table>
+</form>
+<script>
+    x=document.getElementsByTagName("input");
+        function check()
+        {
+            alpha=/^[A-Za-z]+$/
+            if(x[0].value=="")
+            {
+                alert("Please Fill Name");
+                return false;
+            }
+            if(!alpha.test(x[0].value))
+            {
+                alert("Use only Alphabets in Names");
+                return false;
+            }
+            date=/^(([0-9]{2})+\-([0-9]{2})+\-([0-9]{4}))+$/
+            if(x[1].value=="")
+            {
+                alert("please fill DateofBirth");
+                return false;
+                
+            }
+            if(!date.test(x[1].value))
+            {
+                alert("Enter correct format");
+                return false;
+            }
+            if(x[7].value=="")
+            {
+                alert("Pls enter your address ...It is mandatory");
+                return false;
+            }
+            if(x[8].value="")
+            {
+                alert("Pls enter your Emailid ...It is mandatory");
+                return false;
+            }
+            number=/^([0-9]{10})+$/
+            if(x[9].value="")
+            {
+                alert("pls enter Contact number");
+                return false;
+            }
+            if(!number.test(x[9].value))
+            {
+                alert("Use only 10 digit Numbers");
+                return false;
+            }
+            
+        } 
+</script>
+</body>
+</html>
